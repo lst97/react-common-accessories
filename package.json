@@ -1,19 +1,26 @@
 {
-  "name": "react-common-accessories",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "@lst97/react-common-accessories",
+  "version": "0.1.0-alpha.1",
+  "description": "This is a DEVELOPMENT package. React common accessories components for faster development, usually use along with @lst97 packages",
+  "main": "lib/cjs/index.js",
+  "types": "lib/esm/index.d.ts",
+  "type": "commonjs",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "rm -rf lib/ && npx prettier --write src/ && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "build:esm": "tsc --module esnext --outDir lib/esm",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "keywords": [],
+  "author": "lst97",
+  "license": "ISC",
   "devDependencies": {
+    "@mui/material": "^5.15.14",
+    "@types/node": "^20.12.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
