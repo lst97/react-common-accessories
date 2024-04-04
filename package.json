@@ -1,6 +1,6 @@
 {
   "name": "@lst97/react-common-accessories",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "This is a DEVELOPMENT package. React common accessories components for faster development, usually use along with @lst97 packages",
   "main": "lib/cjs/index.js",
   "types": "lib/esm/index.d.ts",
