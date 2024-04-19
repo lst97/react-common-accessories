@@ -28,11 +28,11 @@ export const AppSnackbar = () => {
       autoHideDuration={3000}
       onClose={handleClose}
     >
-      <React.Fragment>
+      <div>
         <Alert onClose={handleClose} severity={severity} sx={{ width: "100%" }}>
           {message}
         </Alert>
-      </React.Fragment>
+      </div>
     </Snackbar>
   );
 };
